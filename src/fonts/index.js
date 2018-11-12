@@ -1,1 +1,1 @@
-import './fonts.sass';
+import './index.sass';

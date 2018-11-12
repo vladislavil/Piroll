@@ -7,7 +7,7 @@ import $ from 'jquery';
 
 import './fonts';
 import initLayout from './layout';
-import initBlocks from './blocks';
+import initBlocks from './blocks/gellary/index';
 import initPages from './pages';
 
 $(() => {

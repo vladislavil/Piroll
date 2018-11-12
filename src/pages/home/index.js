@@ -1,9 +1,7 @@
 import './index.sass';
-// import './index.njk';
 import './index.pug';
-
-import tmpPug from './examplate-inline.tpl.pug';
+import 'blocks/gellary';
 
 export default () => {
-  console.log(tmpPug());
+
 };

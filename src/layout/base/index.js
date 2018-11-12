@@ -1,1 +1,1 @@
-import './base.sass';
+import './index.sass';

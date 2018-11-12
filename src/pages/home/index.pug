@@ -1,14 +1,38 @@
 extends /layout/app
 
 block content
-  .container
-    | CONTENT
-    h1 example block
-    .block-example(style='height: 100px')
-      | Example block
-    h1 example require image
-    img(src='images/square.png' alt='')
-    div(style="background-image: url(${require('images/square3.png')}); height: 100px")
+  .home
+    .home__bg
+      .container
+        .home__titles
+          h1.home__title UI/UX & Graphic Designer
+          h2.home__subtitle I am a Graphic & Web Designer based in New York, specializing
+            br
+            |in User Interface Design and Development.
 
-    - var img = 'images/square4.png'
-    div(style="background-image: url(${require('" + img + "')}); height: 100px")
+    .gellary__content
+      .gellary__product.gellary__product--dark
+        img(src="images/1.png").gellary__img
+      .gellary__product
+        img(src="images/2.png").gellary__img
+      .gellary__product.gellary__product--dark
+        img(src="images/3.png").gellary__img
+      .gellary__product
+        img(src="images/4.png").gellary__img
+      .gellary__product
+        img(src="images/5.png").gellary__img
+      .gellary__product.gellary__product--dark
+        img(src="images/6.png").gellary__img
+      .gellary__product
+        img(src="images/7.png").gellary__img
+      .gellary__product.gellary__product--dark
+        img(src="images/8.png").gellary__img
+      .gellary__product.gellary__product--dark
+       img(src="images/9.png").gellary__img
+      .gellary__product
+        img(src="images/10.png").gellary__img
+      .gellary__product.gellary__product--dark
+        img(src="images/11.png").gellary__img
+      .gellary__product
+        img(src="images/12.png").gellary__img
+
