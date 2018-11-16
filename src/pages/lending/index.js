@@ -6,3 +6,5 @@ import './numbers';
 import './work';
 import './process';
 import './need-project';
+import './clients';
+import './services';

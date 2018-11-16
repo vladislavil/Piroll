@@ -4,39 +4,39 @@
     padding-top: 28px
 
   &__title
-    font-size: 30px
     font-family: $font_main
+    font-size: 30px
     font-weight: bold
     text-align: center
 
   &__text
-    font-size: 16px
     font-family: $font_nunito
+    font-size: 16px
     line-height: 23px
-    color: #898989
+    color: #787878
     text-align: center
 
 
   &__video
-    max-width: 100%
+    position: relative
     padding-top: 48.719%
+    max-width: 100%
     background: url('./copyboock.png') no-repeat
     background-size: cover
-    position: relative
 
-  &__circul
-    border-radius: 50%
-    background-color: #10c9c3
-    width: 85px
-    height: 85px
+  &__circle
+    display: flex
+    align-items: center
+    justify-content: center
     position: absolute
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+    width: 85px
+    height: 85px
+    background-color: #10c9c3
+    border-radius: 50%
     cursor: pointer
-    display: flex
-    align-items: center
-    justify-content: center
     transition: opacity 0.3s
 
     &:hover,
@@ -44,6 +44,5 @@
       opacity: 0.5
 
   &__wrapper
-    padding-top: 55px
-    padding-bottom: 100px
+    padding: 55px 0 100px
 

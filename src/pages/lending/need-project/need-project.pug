@@ -2,7 +2,7 @@ extends /layout/app
 
 
 block content
-  .project
+  sections.project
     .container
       h1.project__title Need a Project?
         .project__content
@@ -12,10 +12,15 @@ block content
               br
               | if this could be the start of something beautiful.
 
-          form.project__form
-            input(type="text").project__input
-            input(type="text").project__input
-            input(type="text").project__input
-            textarea.project__textarea
+          .project__form-wrapper
+            form.project__form
+              .project__contact
+                input(type="text" placeholder="Your Name").project__input
+                input(type="email" placeholder="Your Email").project__input
+              input(type="text" placeholder="Your Title").project__input.project__input--size
+              textarea(placeholder="Your Comment").project__textarea
+              input(type="submit" value="send message").project__button
+
+
 
 
