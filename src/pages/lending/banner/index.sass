@@ -5,17 +5,16 @@
 
   &__content
     display: flex
-    align-items: flex-end
-    flex-direction: column
+    justify-content: flex-end
 
   &__title
-    padding-bottom: 24px
+    margin-bottom: 24px
     font-size: 38px
 
   &__text
     width: 475px
     padding-left: 5px
-    padding-bottom: 33px
+    margin-bottom: 33px
     color: #787878
     font-family: $font-nunito
     font-size: 18px
@@ -26,8 +25,10 @@
     padding: 130px 129px 200px 0
 
   &__button
+    display: block
     width: 180px
     padding: 20px 0
+    border: 1px solid transparent
     margin-left: 5px
     background-color: #10c9c3
     color: #ffffff
@@ -41,7 +42,7 @@
     &:focus
       background-color: #ffffff
       color: #10c9c3
-      border: 1px solid #10c9c3
+      border-color: #10c9c3
 
 
 

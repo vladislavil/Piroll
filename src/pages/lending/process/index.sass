@@ -1,15 +1,17 @@
 .process
 
   &__content
-    padding-top: 28px
+    padding: 192px 0 100px
 
   &__title
+    margin-bottom: 28px
     font-family: $font_main
     font-size: 30px
     font-weight: bold
     text-align: center
 
   &__text
+    margin-bottom: 55px
     font-family: $font_nunito
     font-size: 16px
     line-height: 23px
@@ -19,10 +21,10 @@
 
   &__video
     position: relative
-    padding-top: 48.719%
-    max-width: 100%
-    background: url('./copyboock.png') no-repeat
-    background-size: cover
+    //padding-top: 48.719%
+    //max-width: 100%
+    //background: url('./copyboock.png') no-repeat
+    //background-size: cover
 
   &__circle
     display: flex
@@ -43,6 +45,22 @@
     &:focus
       opacity: 0.5
 
-  &__wrapper
-    padding: 55px 0 100px
+  &__control
+    content: ''
+    position: absolute
+    box-sizing: border-box
+    width: 11px
+    border-style: solid
+    border-width: 10px 0px 10px 10px
+    border-color: transparent transparent transparent #fff
+
+.pause
+  content: ''
+  position: absolute
+  width: 15px
+  height: 15px
+  border-style: solid
+  border-width: 0px 5px 0px 5px
+  border-color: #ffffff
+
 

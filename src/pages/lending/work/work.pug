@@ -2,25 +2,27 @@ extends /layout/app
 
 block content
   section.work
-    .gellary__content
-      .gellary__product.gellary__product--dark
-        img(src="images/1.png").gellary__img
-      .gellary__product
-        img(src="images/2.png").gellary__img
-      .gellary__product.gellary__product--dark
-        img(src="images/3.png").gellary__img
-      .gellary__product
-        img(src="images/4.png").gellary__img
-      .gellary__product
-        img(src="images/5.png").gellary__img
-      .gellary__product.gellary__product--dark
-        img(src="images/6.png").gellary__img
-      .gellary__product
-        img(src="images/7.png").gellary__img
-      .gellary__product.gellary__product--dark
-        img(src="images/8.png").gellary__img
+    .work__list
+      .gellary
+        .gellary__content
+          a(href="images/1.png").gellary__product.gellary__product--dark
+            img(src="images/1.png").gellary__img
+          a(href="images/2.png").gellary__product
+            img(src="images/2.png").gellary__img
+          a(href="images/3.png").gellary__product.gellary__product--dark
+            img(src="images/3.png").gellary__img
+          a(href="images/4.png").gellary__product
+            img(src="images/4.png").gellary__img
+          a(href="images/5.png").gellary__product
+            img(src="images/5.png").gellary__img
+          a(href="images/6.png").gellary__product.gellary__product--dark
+            img(src="images/6.png").gellary__img
+          a(href="images/7.png").gellary__product
+            img(src="images/7.png").gellary__img
+          a(href="images/8.png").gellary__product.gellary__product--dark
+            img(src="images/8.png").gellary__img
 
-      .work__more
-        h5.work__title load more work
+    .work__more
+      a(href="#").work__title load more work
 
 

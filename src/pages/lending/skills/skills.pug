@@ -2,24 +2,27 @@ extends /layout/app
 
 
 block content
-  sections.skills
-    .container
-      .skills__content
-        .skills__left
-          .skills__left-content
-            h1.skills__title Professional Skills
-            ul.skills__list
-              li.skills__item UI/UX Design &nbsp&nbsp&nbsp75%
-                .skills__progress-max
-                  .skills__progress.skills__progress--design
-              li.skills__item web development &nbsp&nbsp&nbsp90%
-                .skills__progress-max
-                  .skills__progress.skills__progress--development
-              li.skills__item marketing &nbsp&nbsp&nbsp65%
-                .skills__progress-max
-                  .skills__progress.skills__progress--marketing
-        .skills__right
-          img(src="images/copyboock.png")
+
+  section.skills
+    .skills__left
+    .skills__right
+    .skills__content
+      .skills__wrapper
+        .skills__inner
+          h1.skills__title Professional Skills
+          ul.skills__list
+            li.skills__item
+              .skills__subtitle UI/UX Design &nbsp&nbsp&nbsp75%
+              .skills__line
+                .skills__progress.skills__progress--design
+            li.skills__item
+              .skills__subtitle web development &nbsp&nbsp&nbsp90%
+              .skills__line
+                .skills__progress.skills__progress--development
+            li.skills__item
+              .skills__subtitle marketing &nbsp&nbsp&nbsp65%
+              .skills__line
+                .skills__progress.skills__progress--marketing
 
 
 

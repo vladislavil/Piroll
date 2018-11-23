@@ -2,19 +2,16 @@ extends /layout/app
 
 
 block content
-  sections.process
+  section.process
     .container
-      h1.process__title Our Work Process
-        .process__content
-          p.process__text
-            | Was years it seasons was there form he in in them together over that,
-            br
-            | third sixth gathered female creeping bearing behold years.
-          .process__wrapper
-            .process__video
-              .process__circle
-                img(src="images/arrow.png")
-
-
-
+      .process__content
+        h1.process__title Our Work Process
+        p.process__text
+          | Was years it seasons was there form he in in them together over that,
+          br
+          | third sixth gathered female creeping bearing behold years.
+        .process__video
+          video(src="./images/vid.mp4" type='video/mp4' codecs="avc1.42E01E, mp4a.40.2" width="100%")
+          .process__circle
+            .process__control
 

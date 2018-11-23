@@ -1,18 +1,14 @@
 .num
   background-color: #10c9c3
 
-
   &__content
     display: flex
     justify-content: space-between
-    padding: 100px 88px 95px 6px
+    padding: 100px 0 95px 0
     color: #ffffff
-    font-family: $font_main
-    font-weight: bold
+    font-weight: $font_bold
     text-transform: uppercase
 
-  &__left,
-  &__right,
   &__item
     display: flex
     justify-content: space-between
@@ -22,19 +18,15 @@
     flex-direction: column
     justify-content: space-between
 
-    & p
+    p
       line-height: 18px
 
-  &__left
-    max-width: 490px
-    flex-grow: 1
-
-  &__right
-    max-width: 478px
-    flex-grow: 1
-
   &__img
+    width: 44px
+    height: 44px
     margin-right: 27px
+    img
+      width: 100%
 
   &__text
     font-size: 12px
@@ -43,42 +35,3 @@
   &__number
     font-size: 18px
 
-  //&__content
-  //  display: flex
-  //  justify-content: space-between
-  //  padding: 98px 0
-  //  color: #ffffff
-  //  font-family: $font-main
-  //  font-weight: bold
-  //  text-transform: uppercase
-  //
-  //&__left,
-  //&__right
-  //  display: flex
-  //
-  //&__right
-  //  margin-right: 105px
-  //
-  //&__img
-  //  margin: auto
-  //  margin-right: 2px
-  //
-  //&__number
-  //  font-size: 18px
-  //  padding-bottom: 8px
-  //
-  //&__text
-  //  font-size: 12px
-  //
-  //&__item
-  //  display: flex
-  //  margin-left: 111px
-  //
-  //  &--indent
-  //    margin-left: 96px
-  //
-  //  &:first-child
-  //    margin-left: 0
-  //
-  //  &-wrapper
-  //    margin-left: 25px
