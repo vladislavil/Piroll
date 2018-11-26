@@ -1,5 +1,5 @@
 import './index.sass';
-import './lending.pug';
+import './main.pug';
 import initBanner from './banner';
 import initAboutus from './aboutus';
 import initSkills from'./skills';
