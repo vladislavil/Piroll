@@ -1,6 +1,1 @@
-import './aboutus.pug';
-import './index.sass';
-
-export default () => {
-
-};
+import './index.sass'

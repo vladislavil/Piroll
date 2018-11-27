@@ -1,4 +1,4 @@
-import './slider.pug';
+// import './slider.pug';
 import './index.sass';
 
 import 'swiper/dist/css/swiper.min.css';

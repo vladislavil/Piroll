@@ -1,7 +1,4 @@
 import './index.sass';
 import './about.pug';
-
-export default () => {
-
-};
+import 'blocks/numbers';
 

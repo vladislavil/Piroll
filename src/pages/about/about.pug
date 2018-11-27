@@ -2,4 +2,30 @@ extends /layout/app
 
 block content
   .about
-    h1 HELLO
+    .about__header
+      h1.about__title Amelia Woods
+      p.about__text I am a Graphic & Web Designer based in New York, specializing
+        br
+        | in User Interface Design and Development.
+    .about__numbers
+      include /blocks/numbers/index
+    .about__content
+      .about__wrapper
+        .about__img
+          img(src="images/copyboock.png")
+        .about__right
+          .aboutus
+            .aboutus__content
+              h1.aboutus__title About me
+              p.aboutus__text Given let waters air sea had you'll, may seed abundantly fish. Were, you'll earth forth winged above brought. Own darkness they're him can't fourth sea place have.
+              p.aboutus__text So the above May stars cattle fruitful face shall. Tree it, winged. Every signs male firmament us. Morning him.
+              .aboutus__signature
+                img(src="images/signature.png")
+      .about__project
+        .project__content
+          h1.project__title Need a Project?
+          .project__text
+            p.text
+              | Let us know what you're looking for in an agency. We'll take a look and see
+              br
+              | if this could be the start of something beautiful.

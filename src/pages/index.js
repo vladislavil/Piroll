@@ -1,10 +1,8 @@
-import initHome from './home';
-import initAbout from './about';
-import initLending from './main';
+import './home';
+import './about';
+import './contact';
+import'./main';
 
 export default () => {
   console.log('init pages');
-  initHome();
-  initAbout();
-  initLending();
 };

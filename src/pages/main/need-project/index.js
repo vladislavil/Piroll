@@ -1,6 +1,3 @@
 import './index.sass';
-import './need-project.pug';
-
-export default () => {
-
-};
+// import './need-project.pug';
+import 'blocks/form';

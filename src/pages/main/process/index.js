@@ -1,10 +1,10 @@
 import './index.sass';
-import './process.pug';
+// import './process.pug';
 
 export default () => {
 
   var controls = {
-    video: $('.process__video  video'),
+    video: $('.process__video .video'),
     playpause: $('.process__circle')
   };
 
@@ -14,26 +14,25 @@ export default () => {
   controls.playpause.click(function(){
     if(video.paused) {
       video.play();
-      $('.process__control').toggleClass("pause");
       play = 1;
+      $('.process__control').toggleClass("pause");
     }
     else {
       video.pause();
-      $('.process__control').toggleClass("pause");
       play = 0;
+      $('.process__control').toggleClass("pause");
     }
-  });
 
-  controls.video.mousemove( function () {
-    if(play == 1)
-      controls.playpause.show();
+    //  if(play === 1) {
+    //   window.onmousemove = function (event) {
+    //     var info = $(event.target).attr("class");
+    //     if(info !== controls.playpause.attr("class") && info !== "process__control pause") {
+    //       if(info === controls.video.attr("class")){
+    //         controls.playpause.show();
+    //         setTimeout(function () {controls.playpause.hide()}, 3000);
+    //       }
+    //     }
+    //   }
+    // }
   });
-
-  window.onmousemove = function (event) {
-    if(play == 1) {
-      if($(event.target).attr("class") !== controls.playpause.attr("class")) {
-        setTimeout(function () {controls.playpause.hide()}, 3000);
-      }
-    }
-  }
 };
