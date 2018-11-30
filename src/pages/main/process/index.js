@@ -1,5 +1,4 @@
-import './index.sass';
-// import './process.pug';
+import './index.sass'
 
 export default () => {
 

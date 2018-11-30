@@ -1,10 +1,13 @@
 .about
 
   &__header
+    display: flex
+    flex-direction: column
+    justify-content: center
     position: relative
     background: #3e3e3e
+    height: 350px
     text-align: center
-    padding: 127px 0
 
     &::after
       content: ""
@@ -23,9 +26,11 @@
   &__title
     position: relative
     z-index: 2
+    margin-bottom: 21px
     color: #ffffff
     font-family: $font_main
     font-size: 38px
+
 
   &__text
     position: relative
@@ -33,17 +38,71 @@
     color: #ffffff
     font-family: $font_nunito
     font-size: 18px
+    line-height: 28px
 
   &__wrapper
+    position: relative
+    height: 570px
     display: flex
 
-  &__img
+  &__left
+    background: url("copyboock.png")
+    background-size: cover
+    background-repeat: no-repeat
     width: 50%
 
+
+  &__right
+    position: relative
+    width: 50%
+    background-color: #f5f5f5
+
+
+.aboutme
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+
+  &__content
+    display: flex
+    align-items: center
+    height: 100%
+    max-width: 453px
+    margin-left: 86px
+
+  &__title
+    margin-bottom: 25px
+    font-size: 30px
+    font-weight: $font_bold
+
+  &__text
+    margin-bottom: 33px
+    color: #787878
+    font-family: $font-nunito
+    font-size: 16px
+    line-height: 24px
+
+  &__paragraph
+    margin-bottom: 27px
+
+
+  &__signature
+    width: 223px
+    height: 57px
+    margin-bottom: 7px
     img
       width: 100%
 
-  &__right
-    width: 50%
+.question
+
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 97px 0 100px
+
+
 
 

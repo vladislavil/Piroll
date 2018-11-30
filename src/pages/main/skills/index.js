@@ -1,3 +1,2 @@
-import './index.sass';
-// import './skills.pug';
+import './index.sass'
 

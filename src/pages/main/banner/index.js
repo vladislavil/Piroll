@@ -1,3 +1,2 @@
-// import './banner.pug';
-import './index.sass';
+import './index.sass'
 

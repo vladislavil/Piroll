@@ -1,2 +1,2 @@
-import './form.sass'
+import './index.sass'
 
