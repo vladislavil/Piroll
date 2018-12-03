@@ -3,10 +3,24 @@
   color: #bcbcbc
   font-family: $font_nunito
 
+  +media($laptop_sm)
+    padding: 0 10px
+
   &__content
     display: flex
     justify-content: space-between
-    padding: 97px 0
+    align-items: center
+    height: 283px
+
+    +media($tablet)
+      flex-direction: column-reverse
+      justify-content: space-around
+      align-items: stretch
+      height: 180px
+
+    +media(565px)
+      height: 290px
+
 
   &__inc
     margin-bottom: 25px
@@ -14,8 +28,19 @@
     font-family: $font_main
     font-size: 18px
 
+    +media($tablet)
+      margin-bottom: 0
+
   &__copyright
     font-size: 15px
+
+    +media($tablet)
+      display: flex
+
+
+    +media(565px)
+      display: block
+      text-align: center
 
     & p
       line-height: 20px
@@ -27,13 +52,44 @@
   &__email
    margin-bottom: 5px
 
+  &__left
+
+    +media($tablet)
+      display: flex
+      justify-content: space-around
+
+    +media(565px)
+      display: block
+      text-align: center
+
   &__right
     display: flex
+
+    +media($tablet)
+      display: flex
+      justify-content: space-around
+      align-items: center
+      margin-bottom: 20px
+
+    +media(565px)
+      flex-direction: row-reverse
+      flex-wrap: wrap
+      margin-bottom: 0
+
+  &__contacts
+    +media(565px)
+      display: flex
+      justify-content: space-between
+      width: 100%
+      margin-bottom: 40px
 
   &__list
     padding: 0 135px 0 146px
     column-count: 2
     column-gap: 55px
+
+    +media($tablet)
+      padding: 0
 
   &__item
     font-size: 15px
@@ -41,6 +97,9 @@
 
   &__last-list
     margin-right: 33px
+
+    +media($tablet)
+      margin-right: 0
 
   & a
     transition: color 0.3s

@@ -8,10 +8,16 @@
     position: relative
     flex-basis: 25%
     flex-shrink: 0
+    border: 1px solid rgba(3,3,3, .03)
     padding-top: 21.962%
 
-    &--dark
-      background-color: #e9e9e9
+    +media($mobile_lg)
+      flex-basis: 50%
+      padding-top: 50%
+
+    +media($mobile_sm)
+      flex-basis: 100%
+      padding-top: 100%
 
     &::after
       content: ''

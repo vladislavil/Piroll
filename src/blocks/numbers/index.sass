@@ -9,9 +9,19 @@
     font-weight: $font_bold
     text-transform: uppercase
 
+    +media($mobile_lg)
+      align-items: center
+      flex-wrap: wrap
+      height: 200px
+      padding: 0
+
   &__item
     display: flex
     justify-content: space-between
+
+    +media($mobile_lg)
+      flex-basis: 50%
+      justify-content: left
 
   &__item-wrapper
     display: flex
@@ -25,8 +35,18 @@
     width: 44px
     height: 44px
     margin-right: 27px
+
+    +media($mobile_lg)
+      width: 70px
+      height: auto
+      margin-right: 0
+      text-align: center
+
     img
       width: 100%
+      +media($mobile_lg)
+        width: 44px
+        height: 44px
 
   &__text
     font-size: 12px

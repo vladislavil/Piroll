@@ -4,6 +4,8 @@
   &__contact
     display: flex
     justify-content: space-between
+    +media($mobile_sm)
+      flex-wrap: wrap
 
   &__part
     margin-bottom: 30px
@@ -11,6 +13,9 @@
   &__part--inline
     display: inline-block
     width: 47.762%
+
+    +media($mobile_sm)
+      width: 100%
 
   &__input
     width: 100%
