@@ -3,7 +3,6 @@
   display: flex
   flex-wrap: wrap
   height: 570px
-  font-family: $font-main
 
   &__title
     margin-bottom: 30px
@@ -52,13 +51,12 @@
   &__right
     width: 50%
     background: url("copyboock.png")
-    background-size: contain
+    background-size: cover
     background-repeat: no-repeat
     background-position: center
 
     +media($mobile_lg)
       width: 100%
-      background-size: cover
 
   &__item
     margin-bottom: 37px

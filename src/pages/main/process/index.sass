@@ -8,10 +8,12 @@
 
   &__title
     margin-bottom: 28px
-    font-family: $font_main
     font-size: 30px
-    font-weight: bold
+    font-weight: $font_bold
     text-align: center
+
+    +media($mobile_lg)
+      font-size: 24px
 
   &__text
     margin-bottom: 55px
@@ -20,6 +22,9 @@
     line-height: 23px
     color: #787878
     text-align: center
+
+    +media($mobile_lg)
+      font-size: 14px
 
 
   &__video
@@ -54,7 +59,7 @@
     box-sizing: border-box
     width: 11px
     border-style: solid
-    border-width: 10px 0px 10px 10px
+    border-width: 10px 0 10px 10px
     border-color: transparent transparent transparent #fff
 
 .pause
@@ -63,7 +68,7 @@
   width: 15px
   height: 15px
   border-style: solid
-  border-width: 0px 5px 0px 5px
+  border-width: 0 5px 0 5px
   border-color: #ffffff
 
 

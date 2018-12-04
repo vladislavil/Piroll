@@ -28,9 +28,10 @@
     z-index: 2
     margin-bottom: 21px
     color: #ffffff
-    font-family: $font_main
     font-size: 38px
 
+    +media($mobile_lg)
+      font-size: 30px
 
   &__text
     position: relative
@@ -40,10 +41,14 @@
     font-size: 18px
     line-height: 28px
 
+    +media($mobile_lg)
+      font-size: 14px
+
   &__wrapper
     position: relative
     height: 570px
     display: flex
+    flex-wrap: wrap
 
   &__left
     background: url("copyboock.png")
@@ -51,11 +56,17 @@
     background-repeat: no-repeat
     width: 50%
 
+    +media($mobile_lg)
+      width: 100%
+
 
   &__right
     position: relative
     width: 50%
     background-color: #f5f5f5
+
+    +media($mobile_lg)
+      width: 100%
 
 
 .aboutme
@@ -63,6 +74,7 @@
   top: 0
   left: 0
   height: 100%
+  width: 100%
 
   &__content
     display: flex
@@ -71,10 +83,27 @@
     max-width: 453px
     margin-left: 86px
 
+    +media($mobile_lg)
+      justify-content: center
+      max-width: 100%
+      margin-left: 0
+
+  &__wrapper
+
+    +media($mobile_lg)
+      max-width: 453px
+      display: flex
+      flex-direction: column
+      align-items: center
+
   &__title
     margin-bottom: 25px
     font-size: 30px
     font-weight: $font_bold
+
+    +media($mobile_lg)
+      margin-bottom: 10px
+      font-size: 24px
 
   &__text
     margin-bottom: 33px
@@ -83,14 +112,27 @@
     font-size: 16px
     line-height: 24px
 
+    +media($mobile_lg)
+      margin-bottom: 10px
+      font-size: 14px
+      text-align: center
+
   &__paragraph
     margin-bottom: 27px
+
+    +media($mobile_lg)
+      margin-bottom: 10px
 
 
   &__signature
     width: 223px
     height: 57px
     margin-bottom: 7px
+
+    +media($mobile_lg)
+      margin-bottom: 0
+      text-align: center
+
     img
       width: 100%
 
