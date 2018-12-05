@@ -11,7 +11,7 @@ export default () => {
       $($bannerNav).toggleClass('open');
       $($bannerNav).toggleClass('close');
       $($wrapper).animate({opacity: '1'},300);
-
+      $($wrapper).toggleClass('index');
     }
     else {
       if($($bannerNav).hasClass('close'))
@@ -20,6 +20,7 @@ export default () => {
       $('body').toggleClass('noscroll');
       $('html').toggleClass('noscroll');
       $($wrapper).animate({opacity: '0'},300);
+      setTimeout(function () {$($wrapper).toggleClass('index')}, 300);
     }
   });
 
