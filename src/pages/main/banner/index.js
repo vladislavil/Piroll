@@ -4,26 +4,22 @@ export default () => {
   var $bannerNav = $('.banner .banner__nav');
   var $wrapper = $('.banner .banner__wrapper');
 
-  // $('.banner .banner__menu').on('click', function () {
-  //   $($bannerNav).animate({transform: translate("0, 100%") },500);
-  // });
-
   $('.banner__header .banner__menu').on("click",function ($index) {
     if($($bannerNav).hasClass("open")) {
       $('body').toggleClass('noscroll');
       $('html').toggleClass('noscroll');
       $($bannerNav).toggleClass('open');
       $($bannerNav).toggleClass('close');
-      //setTimeout(function () {$($wrapper).toggleClass('index')}, 100);
+      $($wrapper).animate({opacity: '1'},300);
 
     }
     else {
       if($($bannerNav).hasClass('close'))
           $($bannerNav).removeClass('close');
-      //$($wrapper).toggleClass('index');
       $($bannerNav).toggleClass('open');
       $('body').toggleClass('noscroll');
       $('html').toggleClass('noscroll');
+      $($wrapper).animate({opacity: '0'},300);
     }
   });
 
