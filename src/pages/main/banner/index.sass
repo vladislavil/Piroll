@@ -1,3 +1,23 @@
+@keyframes animation-left
+  0%
+    transform: translateX(100%)
+  25%
+    transform: translateX(75%)
+  50%
+    transform: translateX(30%)
+  100%
+    transform: translateX(0%)
+
+@keyframes animation-right
+  0%
+    transform: translateX(0%)
+  25%
+    transform: translateX(25%)
+  50%
+    transform: translateX(70%)
+  100%
+    transform: translateX(100%)
+
 .banner
   position: relative
 
@@ -6,7 +26,7 @@
     position: absolute
     top: 0
     left: 0
-    z-index: 1
+    z-index: 2
     background-image: url("banner_bg.jpg")
     background-repeat: no-repeat
     background-position: center
@@ -15,6 +35,109 @@
     height: 100%
     overflow: hidden
     opacity: 0.6
+
+  &__header
+    position: relative
+    z-index: 3
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100px
+
+    +media($tablet)
+      padding: 0 10px
+
+  &__logo
+    line-height: 0
+
+    +media($mobile_lg)
+      line-height: inherit
+      margin-left: 20px
+      z-index: 100
+
+  &__nav
+    +media($mobile_lg)
+      position: fixed
+      top: 0
+      left: 0
+      display: block
+      width: 100%
+      height: 100%
+      transform: translateX(100%)
+      background: rgba(237,237,237,1)
+      background: -moz-linear-gradient(left, rgba(237,237,237,1) 0%, rgba(237,237,237,1) 50%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 63%, rgba(255,255,255,1) 100%)
+      background: -webkit-gradient(left top, right top, color-stop(0%, rgba(237,237,237,1)), color-stop(50%, rgba(237,237,237,1)), color-stop(53%, rgba(246,246,246,1)), color-stop(63%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)))
+      background: -webkit-linear-gradient(left, rgba(237,237,237,1) 0%, rgba(237,237,237,1) 50%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 63%, rgba(255,255,255,1) 100%)
+      background: -o-linear-gradient(left, rgba(237,237,237,1) 0%, rgba(237,237,237,1) 50%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 63%, rgba(255,255,255,1) 100%)
+      background: -ms-linear-gradient(left, rgba(237,237,237,1) 0%, rgba(237,237,237,1) 50%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 63%, rgba(255,255,255,1) 100%)
+      background: linear-gradient(to right, rgba(237,237,237,1) 0%, rgba(237,237,237,1) 50%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 63%, rgba(255,255,255,1) 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=1 )
+
+  &__list
+    display: flex
+    justify-content: space-between
+
+    +media($mobile_lg)
+      flex-direction: column
+      align-items: center
+      height: 100%
+      padding: 100px 0 50px
+
+  &__item
+    margin-right: 29px
+    font-size: 12px
+    font-weight: $font_bold
+    letter-spacing: 1px
+    text-transform: uppercase
+    transition: color 0.3s
+
+    +media($mobile_lg)
+      margin-right: 0
+      margin-bottom: 5px
+      font-size: 24px
+
+
+    &:last-child
+      margin: 0
+
+    &:hover,
+    &:focus
+      color: #10c9c3
+
+  &__menu
+    display: none
+    +media($mobile_lg)
+      content: ''
+      display: block
+      background: linear-gradient(to bottom, #000,#000 50%,transparent 50%, transparent)
+      background-size: 100% 10px
+      margin-right: 20px
+      width: 30px
+      height: 25px
+      cursor: pointer
+      z-index: 10
+
+  .open
+    animation:
+      name: animation-left
+      iteration-count: 1
+      duration: 0.3s
+
+    transform: translateX(0)
+
+  .close
+    animation:
+      name: animation-right
+      iteration-count: 1
+      duration: 0.3s
+
+    transform: translateX(100%)
+
+  .no-scroll
+    overflow: hidden
+
+  .index
+    z-index: auto
 
   &__content
     display: flex
@@ -53,14 +176,17 @@
 
   &__wrapper
     position: relative
-    z-index: 2
-    padding: 130px 129px 200px 0
+    z-index: 3
+    padding: 129px 31px 200px 0
 
     +media($tablet)
       display: flex
       flex-direction: column
       align-items: center
       padding: 60px 5px 60px
+
+  .button
+    margin-left: 5px
 
 
 
