@@ -1,32 +1,39 @@
 import './index.sass'
 
 export default () => {
-  var $bannerNav = $('.banner .banner__nav');
-  var $wrapper = $('.banner .banner__wrapper');
+  var bannerNav = $('.banner .banner__nav');
+  var $bannerNav = $(bannerNav);
 
   $('.banner__header .banner__menu').on("click",function ($index) {
-    if($($bannerNav).hasClass("open")) {
+    $(this).toggleClass('change');
+    if($bannerNav.hasClass("open")) {
       $('body').toggleClass('noscroll');
       $('html').toggleClass('noscroll');
-      $($bannerNav).toggleClass('open');
-      $($bannerNav).toggleClass('close');
-      $($wrapper).animate({opacity: '1'},300);
-      $($wrapper).toggleClass('index');
+      $bannerNav.toggleClass('open');
+      $bannerNav.toggleClass('close');
     }
     else {
-      if($($bannerNav).hasClass('close'))
-          $($bannerNav).removeClass('close');
-      $($bannerNav).toggleClass('open');
+      if($bannerNav.hasClass('close'))
+          $bannerNav.removeClass('close');
+      $bannerNav.toggleClass('open');
       $('body').toggleClass('noscroll');
       $('html').toggleClass('noscroll');
-      $($wrapper).animate({opacity: '0'},300);
-      setTimeout(function () {$($wrapper).toggleClass('index')}, 300);
     }
   });
 
   $(".banner .banner__header").on("click","a", function (event) {
     if(($(this).attr("href")).charAt(0) === "#") {
       event.preventDefault();
+
+
+      if($bannerNav.hasClass('open')){
+        $bannerNav.toggleClass('oppen');
+        $('body').toggleClass('noscroll');
+        $('html').toggleClass('noscroll');
+        $bannerNav.toggleClass('open');
+        $bannerNav.toggleClass('close');
+        $('.banner__header .banner__menu').toggleClass('change');
+      }
 
       const target = $(this).attr('href');
       const $target = $(target);

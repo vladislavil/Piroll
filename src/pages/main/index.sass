@@ -1,17 +1,33 @@
 .main
 #toTop
   position: fixed
-  bottom: 10px
+  bottom: 40px
   right: 10px
-  z-index: 1
   display: none
+  border-radius: 50%
   border: 1px solid #10c9c3
-  background: #fff
-  color: #10c9c3
-  width: 100px
+  background: transparent
+  width: 80px
+  height: 80px
+  vertical-align: middle
   padding: 5px
   font-size: 11px
   text-align: center
   text-transform: uppercase
   cursor: pointer
+
+  &:hover,
+  &:focus
+    border-color: #000
+    color: #555
+
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-style: solid
+    border-width: 0 12px 12px 12px
+    border-color: transparent transparent #000 transparent
 
