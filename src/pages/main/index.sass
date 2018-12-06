@@ -3,9 +3,10 @@
   position: fixed
   bottom: 40px
   right: 10px
+  z-index: 1
   display: none
   border-radius: 50%
-  border: 1px solid #10c9c3
+  border: 1px solid #27ea7f
   background: transparent
   width: 80px
   height: 80px
@@ -18,8 +19,9 @@
 
   &:hover,
   &:focus
-    border-color: #000
-    color: #555
+    border-color: #999
+    &::before
+      border-color: transparent transparent #999 transparent
 
   &::before
     content: ''
@@ -29,5 +31,5 @@
     transform: translate(-50%, -50%)
     border-style: solid
     border-width: 0 12px 12px 12px
-    border-color: transparent transparent #000 transparent
+    border-color: transparent transparent #27ea7f transparent
 
