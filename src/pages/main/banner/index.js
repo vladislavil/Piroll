@@ -3,8 +3,10 @@ import './index.sass'
 export default () => {
   var bannerNav = $('.banner .banner__nav');
   var $bannerNav = $(bannerNav);
+  var menu =  $('.banner__header .banner__menu');
+  var $menu = $(menu);
 
-  $('.banner__header .banner__menu').on("click",function ($index) {
+  $menu.on("click",function ($index) {
     $(this).toggleClass('change');
     if($bannerNav.hasClass("open")) {
       $('body').toggleClass('noscroll');
@@ -21,18 +23,18 @@ export default () => {
     }
   });
 
+  $(window).on('load resize',windowSize);
+
   $(".banner .banner__header").on("click","a", function (event) {
     if(($(this).attr("href")).charAt(0) === "#") {
       event.preventDefault();
-
 
       if($bannerNav.hasClass('open')){
         $bannerNav.toggleClass('oppen');
         $('body').toggleClass('noscroll');
         $('html').toggleClass('noscroll');
         $bannerNav.toggleClass('open');
-        $bannerNav.toggleClass('close');
-        $('.banner__header .banner__menu').toggleClass('change');
+        $menu.toggleClass('change');
       }
 
       const target = $(this).attr('href');
@@ -47,5 +49,16 @@ export default () => {
       }
     }
   });
+
+  function windowSize(){
+    if ($(window).width() > 767 ){
+      if($bannerNav.hasClass('open')){
+        $bannerNav.toggleClass('open');
+        $('body').toggleClass('noscroll');
+        $('html').toggleClass('noscroll');
+        $menu.toggleClass('change');
+      }
+    }
+  }
 }
 

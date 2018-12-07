@@ -144,6 +144,7 @@
     line-height: 22px
     font-weight: $font_bold
     text-transform: uppercase
+    transition: color 0.3s
 
 
   &__prev
@@ -160,6 +161,12 @@
       background-position: center
       width: 12px
       height: 20px
+      transition: color 0.3s
+
+  &__prev,
+  &__next
+    &:hover
+      color: #10c9c3
 
   &__next
     right: 0

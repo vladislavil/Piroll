@@ -33,7 +33,7 @@
     align-items: center
     height: 100px
 
-    +media($tablet)
+    +media($laptop_sm)
       padding: 0 10px
 
   &__logo
@@ -125,12 +125,17 @@
     transform: rotate(45deg) translate(-12px, -9px)
 
   .open
+    display: none
     animation:
       name: animation-left
       iteration-count: 1
       duration: 0.3s
 
+
     transform: translateX(0)
+
+    +media($mobile_lg)
+      display: block
 
   .close
     animation:
