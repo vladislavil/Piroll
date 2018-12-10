@@ -3,7 +3,7 @@ import './index.sass'
 export default () => {
 
   var controls = {
-    video: $('.process__video .video'),
+    video: $('.process__video video'),
     playpause: $('.process__circle')
   };
 
@@ -12,6 +12,7 @@ export default () => {
   $(video).on("click", function () {
     playPause();
   });
+
   $(controls.playpause).on("click", function() {
     playPause();
   });
@@ -20,10 +21,12 @@ export default () => {
     if(video.paused) {
       video.play();
       $(controls.playpause).hide();
+      $(video).attr("controls", "controls");
     }
     else{
       $(controls.playpause).show();
       video.pause();
+      $(video).attr("controls", null);
     }
   }
 };
