@@ -4,19 +4,35 @@
   height: 670px
   position: relative
 
+  +media(875px)
+    max-height: 100%
+
+  //+media($mobile_xs)
+  //  height: 650px
+  //
+  //+media($mobile_sm)
+  //  max-height: 800px
+
   &__title
     margin-bottom: 28px
     font-size: 30px
 
-    +media($mobile_lg)
+    +media(875px)
       font-size: 24px
+      margin-bottom: 15px
 
   &__text
     margin-bottom: 27px
     line-height: 24px
 
+    +media(875px)
+      margin-bottom: 10px
+
   &__paragraph
     margin-bottom: 30px
+
+    +media(875px)
+      margin-bottom: 10px
 
   &__text,
   &__data
@@ -30,6 +46,9 @@
   &__data
     margin-bottom: 15px
 
+    +media(875px)
+      margin-bottom: 5px
+
   &__subtitle
     color: #000
     font-weight: $font_bold
@@ -38,11 +57,32 @@
     width: 50%
     background-color: #f8f9f9
 
+    +media(875px)
+      width: 100%
+
+    +media($mobile_sm)
+      height: 60%
+
+    +media($mobile_xs)
+      height: 65%
+
   &__right
     width: 50%
     background: url("copyboock.png")
     background-repeat: no-repeat
-    background-size: cover
+    background-size: contain
+    background-position: center
+
+    +media(875px)
+      background-position: top center
+      background-size: contain
+      width: 100%
+
+    +media($mobile_sm)
+      height: 40%
+
+    +media($mobile_xs)
+      height: 35%
 
   &__content
     display: flex
@@ -55,8 +95,18 @@
     height: 570px
     margin: 0 auto
 
+    +media(875px)
+      height: 50%
+      padding: 0 10px
+
+    +media($mobile_xs)
+      height: 65%
+
   &__wrapper
     max-width: 435px
+
+    +media(875px)
+      max-width: 100%
 
   &__slider-wrapper
     width: 100%
@@ -66,6 +116,10 @@
     cursor: pointer
     height: 570px
 
+    +media(875px)
+      flex-wrap: wrap
+      height: 100%
+
   &__control
     position: relative
     width: 1170px
@@ -74,6 +128,9 @@
     display: flex
     justify-content: space-between
     align-items: center
+
+    +media(875px)
+      display: none
 
   &__prev,
   &__next
@@ -87,6 +144,7 @@
     line-height: 22px
     font-weight: $font_bold
     text-transform: uppercase
+    transition: color 0.3s
 
 
   &__prev
@@ -103,6 +161,12 @@
       background-position: center
       width: 12px
       height: 20px
+      transition: color 0.3s
+
+  &__prev,
+  &__next
+    &:hover
+      color: #10c9c3
 
   &__next
     right: 0
@@ -124,3 +188,29 @@
     width: 100%
     display: flex
     justify-content: center
+
+
+  .swiper-pagination
+    display: none
+
+
+    +media(875px)
+      display: flex
+
+
+  &__pagination
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 50px
+
+  .swiper-pagination-bullet
+    width: 6px
+    height: 6px
+    background-color: #ddd
+    opacity: 1
+
+  .swiper-pagination-bullet-active
+    width: 10px
+    height: 10px
+    background-color: #ffffff

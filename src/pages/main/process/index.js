@@ -3,35 +3,30 @@ import './index.sass'
 export default () => {
 
   var controls = {
-    video: $('.process__video .video'),
+    video: $('.process__video video'),
     playpause: $('.process__circle')
   };
 
   var video = controls.video[0];
-  var play;
 
-  controls.playpause.click(function(){
+  $(video).on("click", function () {
+    playPause();
+  });
+
+  $(controls.playpause).on("click", function() {
+    playPause();
+  });
+
+  function playPause() {
     if(video.paused) {
       video.play();
-      play = 1;
-      $('.process__control').toggleClass("pause");
+      $(controls.playpause).hide();
+      $(video).attr("controls", "controls");
     }
-    else {
+    else{
+      $(controls.playpause).show();
       video.pause();
-      play = 0;
-      $('.process__control').toggleClass("pause");
+      $(video).attr("controls", null);
     }
-
-    //  if(play === 1) {
-    //   window.onmousemove = function (event) {
-    //     var info = $(event.target).attr("class");
-    //     if(info !== controls.playpause.attr("class") && info !== "process__control pause") {
-    //       if(info === controls.video.attr("class")){
-    //         controls.playpause.show();
-    //         setTimeout(function () {controls.playpause.hide()}, 3000);
-    //       }
-    //     }
-    //   }
-    // }
-  });
+  }
 };
