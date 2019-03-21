@@ -9,6 +9,10 @@ export default () => {
   $menu.on("click", function () {
     $(this).toggleClass("change");
     $bannerNav.toggleClass('menu-opened');
+    $bannerNav.addClass('menu-transition');
+    $bannerNav.on('transitionend', function () {
+      bannerNav.removeClass('menu-transition');
+    });
     $('body').toggleClass('noscroll');
     $('html').toggleClass('noscroll');
   });

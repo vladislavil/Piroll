@@ -35,7 +35,6 @@
       width: 100%
       height: 100%
       transform: translateX(100%)
-      transition: transform 0.5s
       background: rgba(237,237,237,1)
       background: -moz-linear-gradient(left, rgba(237,237,237,1) 0%, rgba(237,237,237,1) 50%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 63%, rgba(255,255,255,1) 100%)
       background: -webkit-gradient(left top, right top, color-stop(0%, rgba(237,237,237,1)), color-stop(50%, rgba(237,237,237,1)), color-stop(53%, rgba(246,246,246,1)), color-stop(63%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)))
@@ -156,8 +155,10 @@
       margin-left: 0
 
 .menu-opened
-  transition: transform 0.5s
   transform: translateX(0)
+
+.menu-transition
+  transition: transform 0.5s
 
 
 
