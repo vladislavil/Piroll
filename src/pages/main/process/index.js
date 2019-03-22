@@ -2,29 +2,20 @@ import './index.sass'
 
 export default () => {
 
-  var controls = {
-    video: $('.process__video video'),
-    playpause: $('.process__circle')
-  };
-
-  var video = controls.video[0];
-
-  $(video).on("click", function () {
-    playPause();
-  });
-
-  $(controls.playpause).on("click", function() {
+  var video = $('.process__video video');
+  video = video[0];
+  $('.process__video').on("click", function () {
     playPause();
   });
 
   function playPause() {
     if(video.paused) {
       video.play();
-      $(controls.playpause).hide();
+      $('.process__play').hide();
       $(video).attr("controls", "controls");
     }
     else{
-      $(controls.playpause).show();
+      $('.process__play').show();
       video.pause();
       $(video).attr("controls", null);
     }

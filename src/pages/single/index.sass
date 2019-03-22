@@ -70,12 +70,10 @@
     width: 50%
     background: url("copyboock.png")
     background-repeat: no-repeat
-    background-size: contain
-    background-position: center
+    background-size: cover
+    background-position: 50% 50%
 
     +media(875px)
-      background-position: top center
-      background-size: contain
       width: 100%
 
     +media($mobile_sm)
@@ -207,10 +205,12 @@
   .swiper-pagination-bullet
     width: 6px
     height: 6px
-    background-color: #ddd
+    background-color: #222222
     opacity: 1
+    outline: none
 
   .swiper-pagination-bullet-active
     width: 10px
     height: 10px
     background-color: #ffffff
+    outline: none

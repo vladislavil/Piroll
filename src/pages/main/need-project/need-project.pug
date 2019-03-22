@@ -10,11 +10,11 @@ block content
           form.form
             .form__contact
               .form__part.form__part--inline
-                input(type="text" placeholder="Your Name").form__input
+                input(type="text" name="name" placeholder="Your Name").form__input
               .form__part.form__part--inline
-                input(type="email" placeholder="Your Email").form__input
+                input(type="email" name="email" placeholder="Your Email").form__input
             .form__part
-              input(type="text" placeholder="Your Title").form__input
+              input(type="text" name="text" placeholder="Your Title").form__input
             .form__part
               textarea(placeholder="Your Comment").form__textarea
-            button.button send message
+            button(onclick='return false').button send message

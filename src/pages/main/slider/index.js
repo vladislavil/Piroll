@@ -1,4 +1,3 @@
-import './slider.pug';
 import './index.sass';
 
 import 'swiper/dist/css/swiper.min.css';
@@ -13,7 +12,8 @@ export default () => {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
-    }
+    },
+    loop: "true"
   });
 }
 
