@@ -15,8 +15,8 @@ export default () => {
       $(video).attr("controls", "controls");
     }
     else{
-      $('.process__play').show();
       video.pause();
+      $('.process__play').show();
       $(video).attr("controls", null);
     }
   }
